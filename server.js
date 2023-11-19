@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('../dist'))
 
 // adding ROUTES to the app
-app.use("/api/v1/auth",userJwtMiddleware, authRoutes);
+app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/song", userJwtMiddleware, songRoutes);
 app.use("/api/v1/playlist",userJwtMiddleware, playlistRoutes);
 //Generic routes
